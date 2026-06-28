@@ -4,11 +4,79 @@
   --font-sans:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+
+  --color-background: var(--ds-color-background);
+  --color-surface: var(--ds-color-surface);
+  --color-surface-muted: var(--ds-color-surface-muted);
+  --color-border: var(--ds-color-border);
+  --color-foreground: var(--ds-color-foreground);
+  --color-muted: var(--ds-color-muted);
+  --color-brand: var(--ds-color-brand);
+  --color-brand-hover: var(--ds-color-brand-hover);
+  --color-brand-foreground: var(--ds-color-brand-foreground);
+  --color-focus: var(--ds-color-focus);
+
+  --spacing-container: var(--ds-container-padding);
+  --spacing-section: var(--ds-section-spacing);
+
+  --radius-xs: var(--ds-radius-xs);
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+  --radius-lg: var(--ds-radius-lg);
+  --radius-xl: var(--ds-radius-xl);
+
+  --shadow-soft: var(--ds-shadow-soft);
+  --shadow-elevated: var(--ds-shadow-elevated);
+
+  --ease-standard: var(--ds-ease-standard);
 }
 
 :root {
+  --ds-color-background: #0a0a0a;
+  --ds-color-surface: #111111;
+  --ds-color-surface-muted: #171717;
+  --ds-color-border: #262626;
+  --ds-color-foreground: #f5f5f5;
+  --ds-color-muted: #a3a3a3;
+  --ds-color-brand: #f4f4f5;
+  --ds-color-brand-hover: #ffffff;
+  --ds-color-brand-foreground: #0a0a0a;
+  --ds-color-focus: #60a5fa;
+
+  --ds-container-width: 1120px;
+  --ds-container-padding: clamp(1rem, 4vw, 2rem);
+  --ds-section-spacing: clamp(4rem, 8vw, 7.5rem);
+
+  --ds-space-1: 0.25rem;
+  --ds-space-2: 0.5rem;
+  --ds-space-3: 0.75rem;
+  --ds-space-4: 1rem;
+  --ds-space-5: 1.25rem;
+  --ds-space-6: 1.5rem;
+  --ds-space-8: 2rem;
+  --ds-space-10: 2.5rem;
+  --ds-space-12: 3rem;
+  --ds-space-16: 4rem;
+  --ds-space-20: 5rem;
+  --ds-space-24: 6rem;
+
+  --ds-radius-xs: 0.25rem;
+  --ds-radius-sm: 0.375rem;
+  --ds-radius-md: 0.5rem;
+  --ds-radius-lg: 0.75rem;
+  --ds-radius-xl: 1rem;
+
+  --ds-shadow-soft: 0 1rem 3rem rgb(0 0 0 / 24%);
+  --ds-shadow-elevated: 0 1.5rem 5rem rgb(0 0 0 / 36%);
+
+  --ds-duration-fast: 150ms;
+  --ds-duration-base: 220ms;
+  --ds-duration-slow: 420ms;
+  --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
   color-scheme: dark;
-  background: #0a0a0a;
+  background: var(--ds-color-background);
+  color: var(--ds-color-foreground);
   font-family: var(--font-sans);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,16 +86,57 @@
 
 html {
   min-height: 100%;
-  background: #0a0a0a;
+  background: var(--ds-color-background);
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: #0a0a0a;
+  background: var(--ds-color-background);
 }
 
 #root {
   min-height: 100vh;
+}
+
+::selection {
+  background: var(--ds-color-brand);
+  color: var(--ds-color-brand-foreground);
+}
+
+.hero-tech-word {
+  animation: hero-tech-rotate 8.8s infinite;
+  opacity: 0;
+  transform: translateY(70%);
+}
+
+@keyframes hero-tech-rotate {
+  0%,
+  18% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  24%,
+  100% {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .hero-tech-word:first-child {
+    opacity: 1;
+    transform: none;
+  }
 }
