@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Download, Menu, X } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { navItems, type NavItem } from '../../constants/navigation'
+import { resumeFileName, resumePath } from '../../constants/resume'
 import { cn } from '../../utils/cn'
 import { Container } from './Container'
 
@@ -25,8 +26,8 @@ function ResumeButton({ className }: { className?: string }) {
         'inline-flex h-10 items-center justify-center gap-2 rounded-md border border-transparent bg-brand px-5 text-sm font-medium text-brand-foreground outline-none transition-colors duration-[var(--ds-duration-base)] ease-standard hover:bg-brand-hover focus-visible:ring-2 focus-visible:ring-focus focus-visible:ring-offset-2 focus-visible:ring-offset-background',
         className,
       )}
-      download
-      href="/resume.pdf"
+      download={resumeFileName}
+      href={resumePath}
       whileHover={shouldReduceMotion ? undefined : { y: -1 }}
       whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
     >

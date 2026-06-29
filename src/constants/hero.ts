@@ -1,47 +1,50 @@
-import type { LucideIcon } from 'lucide-react'
-import { Code2, Mail, Network } from 'lucide-react'
+import type { LucideIcon } from "lucide-react";
+import { Mail } from "lucide-react";
+import type { IconType } from "react-icons";
+
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export const heroTechnologies = [
-  'React.js',
-  'Next.js',
-  'TypeScript',
-  'React Native',
-] as const
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "React Native",
+] as const;
 
 export const heroStats = [
-  'Frontend Engineer',
-  '3+ Years Experience',
-  'Production Applications',
-] as const
+  "Frontend Engineer",
+  "3+ Years Experience",
+  "Production Applications",
+] as const;
 
 export const profileSkills = [
-  'React.js',
-  'Next.js',
-  'TypeScript',
-  'React Native',
-  'Tailwind CSS',
-] as const
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "React Native",
+  "Tailwind CSS",
+] as const;
 
 export type SocialLink = {
-  label: string
-  href: string
-  icon: LucideIcon
-}
+  label: string;
+  href: string;
+  icon: LucideIcon | IconType;
+};
 
 export const socialLinks: SocialLink[] = [
   {
-    label: 'GitHub',
-    href: 'https://github.com/ramanmalviya',
-    icon: Code2,
+    label: "GitHub",
+    href: "https://github.com/ramanmalviya987",
+    icon: FaGithub,
   },
   {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ramanmalviya',
-    icon: Network,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/raman-malviya-75b579211/",
+    icon: FaLinkedin,
   },
   {
-    label: 'Email',
-    href: 'mailto:ramanmalviya@example.com',
+    label: "Email",
+    href: "mailto:raman.s.malviya@gmail.com",
     icon: Mail,
   },
-]
+];

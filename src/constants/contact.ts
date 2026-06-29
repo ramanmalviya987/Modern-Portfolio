@@ -26,7 +26,7 @@ export const contactMethods: ContactMethod[] = [
   {
     title: 'LinkedIn',
     description: 'Professional Profile',
-    href: 'https://www.linkedin.com',
+    href: 'https://www.linkedin.com/in/raman-malviya-75b579211/',
     actionLabel: 'Open Profile',
     type: 'link',
     icon: FaLinkedin
@@ -34,7 +34,7 @@ export const contactMethods: ContactMethod[] = [
   {
     title: 'GitHub',
     description: 'Projects & Code',
-    href: 'https://github.com',
+    href: 'https://github.com/ramanmalviya987',
     actionLabel: 'Open GitHub',
     type: 'link',
     icon: Code2,

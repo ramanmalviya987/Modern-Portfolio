@@ -258,6 +258,7 @@ import {
   contactMethods,
   type ContactMethod,
 } from '../constants/contact'
+import { resumeFileName, resumePath } from '../constants/resume'
 import { Container, Section } from '../components/common'
 import { cn } from '../utils/cn'
 
@@ -297,7 +298,7 @@ function ContactAction({
           ? 'border-transparent bg-brand text-brand-foreground hover:bg-brand-hover'
           : 'border-border bg-surface/70 text-foreground hover:bg-surface-muted',
       )}
-      download={primary ? undefined : true}
+      download={primary ? undefined : resumeFileName}
       href={href}
       whileHover={shouldReduceMotion ? undefined : { scale: 1.02, y: -1 }}
       whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
@@ -473,7 +474,7 @@ export function ContactSection() {
               <ContactAction href={`mailto:${contactEmail}`} icon={Mail} primary>
                 Email Me
               </ContactAction>
-              <ContactAction href="/resume.pdf" icon={Download}>
+              <ContactAction href={resumePath} icon={Download}>
                 Download Resume
               </ContactAction>
             </motion.div>

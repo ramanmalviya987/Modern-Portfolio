@@ -40,9 +40,9 @@ export const projects: Project[] = [
       'Sentry',
       'Deep Linking',
     ],
-    links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'GitHub', href: '#', variant: 'secondary' },
+     links: [
+      { label: 'Android', href: 'https://play.google.com/store/apps/details?id=com.C9Eye', variant: 'primary' },
+      { label: 'IOS', href: 'https://apps.apple.com/in/app/c9pharos/id6740405070', variant: 'secondary' },
     ],
     featured: true,
   },
@@ -59,8 +59,8 @@ export const projects: Project[] = [
     impact: ['Published on Android & iOS', '100+ Downloads'],
     technologies: ['React Native', 'Firebase'],
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'GitHub', href: '#', variant: 'secondary' },
+      { label: 'Android', href: 'https://play.google.com/store/apps/details?id=com.C9Disti', variant: 'primary' },
+      { label: 'IOS', href: 'https://apps.apple.com/in/app/c9disti/id6738125766', variant: 'secondary' },
     ],
   },
   {
@@ -76,8 +76,7 @@ export const projects: Project[] = [
     impact: ['Published on Google Play', '100+ Downloads'],
     technologies: ['React Native', 'Node.js', 'MongoDB'],
     links: [
-      { label: 'View Project', href: '#', variant: 'primary' },
-      { label: 'GitHub', href: '#', variant: 'secondary' },
+      { label: 'Android', href: 'https://play.google.com/store/apps/details?id=com.readreuse_native_app', variant: 'primary' },
     ],
   },
 ]

@@ -42,6 +42,7 @@ function ProjectButton({ link }: { link: ProjectLink }) {
           ? 'border-transparent bg-brand text-brand-foreground hover:bg-brand-hover'
           : 'border-border bg-surface/70 text-foreground hover:bg-surface-muted',
       )}
+      target='_blank'
       href={link.href}
       whileHover={{ y: -1 }}
       whileTap={{ scale: 0.98 }}

@@ -13,6 +13,7 @@ import {
   socialLinks,
   type SocialLink,
 } from '../constants/hero'
+import { resumeFileName, resumePath } from '../constants/resume'
 import { Container, Section } from '../components/common'
 import { cn } from '../utils/cn'
 
@@ -42,7 +43,7 @@ function HeroAction({
           ? 'border-transparent bg-brand text-brand-foreground hover:bg-brand-hover'
           : 'border-border bg-surface/70 text-foreground hover:bg-surface-muted',
       )}
-      download={primary ? true : undefined}
+      download={primary ? resumeFileName : undefined}
       href={href}
       whileHover={shouldReduceMotion ? undefined : { scale: 1.02, y: -1 }}
       whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
@@ -227,7 +228,7 @@ export function HeroSection() {
               transition={{ duration: 0.45, ease: [0.2, 0, 0, 1] }}
               variants={entrance}
             >
-              <HeroAction href="/resume.pdf" icon={Download} primary>
+              <HeroAction href={resumePath} icon={Download} primary>
                 Download Resume
               </HeroAction>
               <HeroAction href="#projects" icon={ArrowRight}>
